@@ -7,8 +7,7 @@
     system: system, admin,user,gusts
 
 ## conf/jetty.xml 配置控制台
-只有admin和gusts角色的用户才可以登陆控制台
-    <!-- console控制台权限 -->
+    <!-- console控制台权限(只有admin和gusts角色的用户才可以登陆控制台) -->
     <bean id="securityConstraint" class="org.eclipse.jetty.util.security.Constraint">
         <property name="name" value="BASIC" />
         <!-- 可以登录控制台的用户 -->
