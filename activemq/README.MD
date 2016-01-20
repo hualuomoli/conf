@@ -84,3 +84,11 @@
         <persistenceAdapter>
             <jdbcPersistenceAdapter dataSource="#mysql-ds" />
         </persistenceAdapter>
+
+
+# 集群
+    访问activemq的url地址修改为
+    failover:(
+        tcp://localhost:61616,
+        tcp://localhost:61617,
+        tcp://localhost:61618)
