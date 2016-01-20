@@ -107,9 +107,8 @@
         </shutdownHooks>
         <!-- authorization权限认证 -->
         <plugins>
-            <!--use JAAS to authenticate using the login.config file on the classpath to configure JAAS -->
+            <!-- login.config中配置与configuration相同名称的数据 -->
             <jaasAuthenticationPlugin configuration="activemq-domain" />
-            <!--  lets configure a destination based authorization mechanism -->
             <authorizationPlugin>
                 <map>
                     <authorizationMap>
