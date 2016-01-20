@@ -26,6 +26,15 @@
     <!-- Allows accessing the server log -->
     <bean id="logQuery" class="io.fabric8.insight.log.log4j.Log4jLogQuery" lazy-init="false" scope="singleton" init-method="start" destroy-method="stop">
     </bean>
+    <!-- 配置mysql数据库连接 -->
+    <!-- 需要将mysql和alibaba的连接池的jar包复制到lib目录下 -->
+    <bean id="mysql-ds" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/activemq?useUnicode=true&amp;characterEncoding=utf-8" />
+        <property name="username" value="activemq" />
+        <property name="password" value="activemq" />
+        <property name="poolPreparedStatements" value="true" />
+    </bean>
     <!--
         The <broker> element is used to configure the ActiveMQ broker.
     -->
@@ -66,8 +75,15 @@
 
             http://activemq.apache.org/persistence.html
         -->
+        <!-- 实例化到数据库 -->
+        <!-- 
         <persistenceAdapter>
             <kahaDB directory="${activemq.data}/kahadb" />
+        </persistenceAdapter>
+        -->
+        <!-- mysql -->
+        <persistenceAdapter>
+            <jdbcPersistenceAdapter dataSource="#mysql-ds" />
         </persistenceAdapter>
         <!--
             The systemUsage controls the maximum amount of space the broker will
