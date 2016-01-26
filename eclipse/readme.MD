@@ -1,4 +1,42 @@
-# [Eclipse插件地址](http://marketplace.eclipse.org/)
+# 配置
 
-## [OpenExplorer](https://cloud.github.com/downloads/samsonw/OpenExplorer/OpenExplorer_1.5.0.v201108051513.jar)
+## 配置插件
+### OpenExplorer/eExplorer
+    在线安装
+    `Help --> Eclipse Marketplace` 打开插件市场
+     在搜索框输入`OpenExplorer` 选择eExplore,点击`install` 安装完成后重启即可
 
+    离线安装
+    [下载](https://cloud.github.com/downloads/samsonw/OpenExplorer/OpenExplorer_1.5.0.v201108051513.jar)插件，并复制到ECLIPSE_HOME/plugins目录下，重启即可
+
+
+## 配置JDK
+    `Windows --> preference`打开属性配置页面
+    选择`java --> Installed JRES` 
+    选择`ADD`新增一个JDK
+
+## 配置Maven
+    `Windows --> preference`打开属性配置页面
+    选择`Maven --> User settings` 
+    点击`Global Settings`下的`Browse` 选择maven的安装目录
+
+## 配置Encoding
+    修改`ECLIPSE_HOME/eclipse.ini`增加一行
+    --encoding
+    -Dfile.encoding=utf-8
+
+## 配置文字大小
+     `Windows --> preference`打开属性配置页面
+     依次展开`General --> Appearance --> Colors and Fonts`
+     选择`Basic --> Text Font`，点击`Click`修改字体为`Consolas 常规 16`
+
+## 配置格式
+    `Windows --> preference`打开属性配置页面
+     依次展开`Java --> Code Style --> Formatter`
+     选择`New`新增一个配置，名称为`hualuomoli`
+         选择`Line Wrapping`
+            `--> General Settings --> Maximum line width` 值设置为120
+            `--> Preview --> Set line width of preview window` 只设置120
+        选择`Comments`
+            `--> General settings` 关闭 `javadoc`
+            `--> Line width --> Maximum line width for comments` 值为120 
