@@ -69,9 +69,9 @@
         <!-- ./authorization -->
 
 
-# conf/activemq.xml 实例化到数据库
+# 实例化到数据库
+## conf/activemq.xml配置数据库连接
     <!-- 配置mysql数据库连接 -->
-    <!-- 需要将mysql和alibaba的连接池的jar包复制到lib目录下 -->
     <bean id="mysql-ds" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://localhost:3306/activemq?useUnicode=true&amp;characterEncoding=utf-8" />
@@ -80,10 +80,15 @@
         <property name="poolPreparedStatements" value="true" />
     </bean>
 
+## conf/activemq.xml配置持久化存储到mysql
      <!-- mysql -->
         <persistenceAdapter>
             <jdbcPersistenceAdapter dataSource="#mysql-ds" />
         </persistenceAdapter>
+
+## 添加JAR包到lib目录下
+    mysql-connector-java-5.1.34.jar(http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.34/mysql-connector-java-5.1.34.jar)
+    druid-1.0.15.jar(http://central.maven.org/maven2/com/alibaba/druid/1.0.15/druid-1.0.15.jar)
 
 
 # 集群
