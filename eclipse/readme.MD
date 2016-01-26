@@ -41,3 +41,7 @@
 选择`Comments`<br>
 `--> General settings` 关闭 `javadoc`<br>
 `--> Line width --> Maximum line width for comments` 值为120 <br>
+
+# 关闭有效性校验
+`Windows --> preference`打开属性配置页面<br>
+选择`Validation`  点击`Disable All`<br>
