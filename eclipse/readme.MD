@@ -4,9 +4,9 @@
 `Help --> Eclipse Marketplace` 打开插件市场<br>
 在搜索框输入`OpenExplorer` 选择eExplore,点击`install` 安装完成后重启即可<br>
 
-离线安装
+### 离线安装
 [下载](https://cloud.github.com/downloads/samsonw/OpenExplorer/OpenExplorer_1.5.0.v201108051513.jar)插件<br>
-复制到ECLIPSE_HOME/plugins目录下，重启即可
+复制到`%ECLIPSE_HOME%/plugins`目录下，重启即可
 
 
 # 配置JDK
@@ -20,9 +20,11 @@
 点击`Global Settings`下的`Browse` 选择maven的安装目录<br>
 
 # 配置Encoding
-修改`ECLIPSE_HOME/eclipse.ini`增加一行<br>
---encoding<br>
--Dfile.encoding=utf-8<br>
+修改`%ECLIPSE_HOME%/eclipse.ini`增加一行<br>
+```
+--encoding
+-Dfile.encoding=utf-8
+```
 
 # 配置文字大小
  `Windows --> preference`打开属性配置页面<br>
