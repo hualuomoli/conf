@@ -31,16 +31,22 @@
  依次展开`General --> Appearance --> Colors and Fonts`<br>
  选择`Basic --> Text Font`，点击`Click`修改字体为`Consolas 常规 16`<br>
 
-# 配置格式
+# 配置JAVA格式
 `Windows --> preference`打开属性配置页面<br>
  依次展开`Java --> Code Style --> Formatter`<br>
  选择`New`新增一个配置，名称为`hualuomoli`<br>
  选择`Line Wrapping`<br>
-`--> General Settings --> Maximum line width` 值设置为120<br>
+`--> General Settings --> Maximum line width` 值设置为160<br>
 `--> Preview --> Set line width of preview window` 只设置120<br>
 选择`Comments`<br>
 `--> General settings` 关闭 `javadoc`<br>
 `--> Line width --> Maximum line width for comments` 值为120 <br>
+
+# 配置XML格式
+`Windows --> preference`打开属性配置页面<br>
+ 依次展开`XML --> XML Files --> Editor`<br>
+ 选择`Formating --> Line width` 值为120
+
 
 # 关闭有效性校验
 `Windows --> preference`打开属性配置页面<br>

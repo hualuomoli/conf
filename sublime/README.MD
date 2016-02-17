@@ -17,4 +17,4 @@ Sublime Text 默认的 Autocomplete 功能只考虑当前的文件，而 AllAuto
 ![AutoFileName](http://ww1.sinaimg.cn/large/7cc829d3gw1elzufip4n6j20m809hdgz.jpg)
 
 ## 5 [SublimeOnSaveBuild](https://github.com/alexnj/SublimeOnSaveBuild)
-保存即编译 [sassguide](http://www.w3cplus.com/sassguide/index.html)
+SCSS保存即编译 [sassguide](http://www.w3cplus.com/sassguide/index.html)
