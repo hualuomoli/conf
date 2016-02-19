@@ -1,0 +1,8 @@
+{
+	"jslint_happy": true,
+	"format_on_save": true,
+	"jsbeautifyrc_files": true,
+	"indent_size": 2,
+    "indent_char": " ",
+    "format_on_save_extensions": ["js", "json","jshintrc","bowerrc"]
+}
