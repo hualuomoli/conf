@@ -1,5 +1,5 @@
 # 配置插件
-## OpenExplorer/eExplorer
+## OpenExplorer
 `Help --> Eclipse Marketplace` 打开插件市场<br>
 在搜索框输入`OpenExplorer` 选择eExplore,点击`install` 安装完成后重启即可<br>
 
