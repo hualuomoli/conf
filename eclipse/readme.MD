@@ -28,7 +28,7 @@
 # 配置文字大小
  `Windows --> preference`打开属性配置页面<br>
  依次展开`General --> Appearance --> Colors and Fonts`<br>
- 选择`Basic --> Text Font`，点击`Click`修改字体为`Consolas 常规 16`<br>
+ 选择`Basic --> Text Font`，点击`Edit`修改字体为`Consolas 常规 16`<br>
 
 # 配置JAVA格式
 `Windows --> preference`打开属性配置页面<br>
