@@ -1,12 +1,11 @@
 # 配置插件
 ## OpenExplorer/eExplorer
-### 在线安装
 `Help --> Eclipse Marketplace` 打开插件市场<br>
 在搜索框输入`OpenExplorer` 选择eExplore,点击`install` 安装完成后重启即可<br>
 
-### 离线安装
-[下载](https://cloud.github.com/downloads/samsonw/OpenExplorer/OpenExplorer_1.5.0.v201108051513.jar)插件<br>
-复制到`%ECLIPSE_HOME%/plugins`目录下，重启即可
+## Subversion
+`Help --> Eclipse Marketplace` 打开插件市场<br>
+在搜索框输入`Subversion` 选择Subclipse,点击`install` 安装完成后重启即可<br>
 
 
 # 配置JDK
