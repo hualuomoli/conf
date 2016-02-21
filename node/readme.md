@@ -7,17 +7,14 @@
         registry = http://registry.npm.taobao.org/
         loglevel = http
 
-## 全局安装插件
-npm install -g npm bower
+## 更新NPM
+npm install -g npm 
 
-    npm             后端包管理器
-    bower           前端包管理器
-    
+## 前端包管理器
+npm install -g bower
 
-## gulp配置
+## 构建工具
 npm install -g gulp gulp-cli
 
-    gulp            构建工具
-    gulp-cli        command-line interface
-    
-##  
+## 
+npm install -g cordova ionic
