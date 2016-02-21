@@ -16,5 +16,5 @@ npm install -g bower
 ## 构建工具
 npm install -g gulp gulp-cli
 
-## 
+## 移动开发
 npm install -g cordova ionic
