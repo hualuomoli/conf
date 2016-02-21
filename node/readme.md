@@ -8,13 +8,13 @@
         loglevel = http
 
 ## 更新NPM
-npm install -g npm 
+`npm install -g npm`
 
 ## 前端包管理器
-npm install -g bower
+`npm install -g bower`
 
 ## 构建工具
-npm install -g gulp gulp-cli
+`npm install -g gulp gulp-cli`
 
 ## 移动开发
-npm install -g cordova ionic
+`npm install -g cordova ionic`
