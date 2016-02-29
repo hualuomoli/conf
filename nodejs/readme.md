@@ -1,14 +1,8 @@
-# 配置
 
-## 修改npm的镜像地址
-
-    文件位置:C:\Users\电脑用户名\.npmrc
-    内容
-        registry = http://registry.npm.taobao.org/
-        loglevel = http
-
-## 更新NPM
+# 更新NPM
 `npm install -g npm`
+
+# 全局安装
 
 ## 前端包管理器
 `npm install -g bower`
@@ -27,3 +21,4 @@
 
 ## SCSS
 `npm install -g node-sass`
+`npm install postcss-cli autoprefixer`
