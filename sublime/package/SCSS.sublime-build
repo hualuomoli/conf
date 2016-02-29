@@ -1,0 +1,23 @@
+{
+
+	"cmd": [
+			// "echo", "filepath:", "${file_path}", ",file:", "$file", "&&",
+			"sass", "--update", "$file:${file_path}/../css/${file_base_name}.css", "--stop-on-error", "--no-cache",
+			"&&",
+			// "echo", "filepath:", "${file_path}", ",file:", "$file", "&&",
+			"postcss", "--use", "autoprefixer", "${file_path}/../css/${file_base_name}.css", "-d", "${file_path}/../css"
+			],
+	"selector": "source.sass, source.scss",
+	"line_regex": "Line ([0-9]+):",
+
+	"osx":
+	{
+		"path": "/usr/local/bin:$PATH"
+	},
+
+	"windows":
+	{
+		"shell": "true"
+	}
+
+}

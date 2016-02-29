@@ -18,3 +18,12 @@
 
 ## 移动开发
 `npm install -g cordova ionic`
+
+## RAML API
+`npm install -g api-designer raml2html`
+
+## Express
+`npm install -g express express-generator`
+
+## SCSS
+`npm install -g node-sass`
