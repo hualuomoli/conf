@@ -20,5 +20,4 @@
 `npm install -g express express-generator`
 
 ## SCSS
-`npm install -g node-sass`
 `npm install postcss-cli autoprefixer`
