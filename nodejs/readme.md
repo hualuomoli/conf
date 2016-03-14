@@ -17,7 +17,7 @@
 `npm install -g api-designer raml2html`
 
 ## Node-sass
-`npm install -g node-sass`
+`npm install -g node-gyp node-sass`
 
 ## 移动开发
 `npm install -g cordova ionic`
