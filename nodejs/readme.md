@@ -7,17 +7,19 @@
 ## 前端包管理器
 `npm install -g bower`
 
+## Express
+`npm install -g express express-generator`
+
 ## 构建工具
 `npm install -g gulp gulp-cli`
-
-## 移动开发
-`npm install -g cordova ionic`
 
 ## RAML API
 `npm install -g api-designer raml2html`
 
-## Express
-`npm install -g express express-generator`
+## 移动开发
+`npm install -g cordova ionic`
 
-## SCSS
-`npm install postcss-cli autoprefixer`
+
+
+
+
