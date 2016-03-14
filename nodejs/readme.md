@@ -16,6 +16,9 @@
 ## RAML API
 `npm install -g api-designer raml2html`
 
+## Node-sass
+`npm install -g node-sass`
+
 ## 移动开发
 `npm install -g cordova ionic`
 
