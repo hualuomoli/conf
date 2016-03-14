@@ -1,5 +1,10 @@
 # 插件管理器
 
+# 配置sublime
+修改`host`增加`sublime.wbond.net`的解析 <br>
+C:\Windows\System32\drivers\etc\hosts <br>
+50.116.34.243 sublime.wbond.net
+
 ## [Package Control](https://sublime.wbond.net/installation)
 作为安装 Sublime Text 插件的必备利器，Package Control 是这款编辑器的标配，可以方便开发人员快速安装需要的插件。<br>
 ![Package Control](http://www.php100.com/uploadfile/2014/1128/20141128102157759.png)
@@ -60,7 +65,3 @@ DocBlockr 可以使你很方便地对代码建立文档。它会解析函数，�
 ![DocBlockr](http://static.oschina.net/uploads/img/201402/05081912_8pCz.gif)
 
 
-# 注
-修改`host`增加`sublime.wbond.net`的解析
-C:\Windows\System32\drivers\etc\hosts
-50.116.34.243 sublime.wbond.net
