@@ -18,7 +18,12 @@
 
 ## Node-sass
 下载[`win32-x64-46_binding.node`](https://coding.net/u/hualuomoli/p/libs/git/raw/master/node-sass/win32-x64-46_binding.node)，具体下载的文件需要根据需要下载<br>
-`npm install -g node-gyp node-sass --sass-binary-path=binding文件的目录`
+
+可以通过以下两种方式设置building
+- 安装node-sass时增加参数`--sass-binary-path`<br>
+- 设置环境变量`SASS_BINARY_PATH`(建议)<br>
+
+`set SASS_BINARY_PATH=文件位置 & npm install -g node-sass`
 
 
 ## 移动开发
