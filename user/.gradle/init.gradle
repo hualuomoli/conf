@@ -1,0 +1,14 @@
+allprojects {
+	repositories {
+		mavenLocal()
+		maven {
+			name : 'localhost'
+			url "http://localhost:8081/nexus/content/groups/public/"
+		}
+		maven {
+			name 'oschina'
+			url "http://maven.oschina.net/content/groups/public/"
+		}
+		mavenCentral()
+	}
+}
