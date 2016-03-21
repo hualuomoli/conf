@@ -50,3 +50,5 @@
 # 关闭有效性校验
 `Windows --> preference`打开属性配置页面<br>
 选择`Validation`  点击`Disable All`<br>
+
+选择打开的项目点击右键,选 `properties - Builders`，在右边只对`java Builder`选中,其它的不要选。
