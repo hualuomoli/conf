@@ -1,2 +1,2 @@
-# ¹È¸è±¾µØ¿çÓò
+# è°·æ­Œè·¨åŸŸ
  --args --disable-web-security --allow-file-access-from-files
