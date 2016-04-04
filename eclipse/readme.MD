@@ -1,7 +1,15 @@
+
+# 配置Encoding
+修改`%ECLIPSE_HOME%/eclipse.ini`增加一行<br>
+```
+--encoding
+-Dfile.encoding=utf-8
+```
+
 # 配置插件
-## OpenExplorer
+## Gradle
 `Help --> Eclipse Marketplace` 打开插件市场<br>
-在搜索框输入`OpenExplorer` 选择eExplore,点击`install` 安装完成后重启即可<br>
+在搜索框输入`gradle` 选择 Gradle(STS) Integration for Eclipse... ,点击`install` 安装完成后重启即可<br>
 
 ## Subversion
 `Help --> Eclipse Marketplace` 打开插件市场<br>
@@ -17,13 +25,6 @@
 `Windows --> preference`打开属性配置页面<br>
 选择`Maven --> User settings` <br>
 点击`Global Settings`下的`Browse` 选择maven的安装目录<br>
-
-# 配置Encoding
-修改`%ECLIPSE_HOME%/eclipse.ini`增加一行<br>
-```
---encoding
--Dfile.encoding=utf-8
-```
 
 # 配置文字大小
  `Windows --> preference`打开属性配置页面<br>
