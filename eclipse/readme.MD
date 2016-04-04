@@ -15,6 +15,10 @@
 `Help --> Eclipse Marketplace` 打开插件市场<br>
 在搜索框输入`Subversion` 选择Subclipse,点击`install` 安装完成后重启即可<br>
 
+## JRebel
+`Help --> Eclipse Marketplace` 打开插件市场<br>
+在搜索框输入`JRebel` 选择 JRebel for Eclipse..,点击`install` 安装完成后重启即可<br>
+
 
 # 配置JDK
 `Windows --> preference`打开属性配置页面<br>
