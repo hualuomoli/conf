@@ -1,5 +1,6 @@
 # 下载
-`wget https://mirror.tuna.tsinghua.edu.cn/gitlab-ce/ubuntu/pool/trusty/main/g/gitlab-ce/gitlab-ce_8.6.3-ce.0_amd64.deb`
+[选择对应系统的GitLab安装包](https://mirror.tuna.tsinghua.edu.cn/gitlab-ce)<br>
+`wget/ubuntu/pool/trusty/main/g/gitlab-ce/gitlab-ce_8.6.3-ce.0_amd64.deb`
 
 # 安装依赖
 `sudo apt-get install -y openssh-server`<br>
@@ -9,7 +10,7 @@
 选择'Internet Site'
 
 # 安装gitlib
-sudo dpkg -i gitlab_XXX.deb
+`sudo dpkg -i gitlab-ce_8.6.3-ce.0_amd64.deb`
 
 # 配置和使用GitLab
 
