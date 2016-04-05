@@ -3,9 +3,7 @@
 `wget https://mirror.tuna.tsinghua.edu.cn/gitlab-ce/ubuntu/pool/trusty/main/g/gitlab-ce/gitlab-ce_8.6.3-ce.0_amd64.deb`
 
 # 安装依赖
-`sudo apt-get install -y openssh-server`<br>
-`sudo apt-get install -y postfix`<br>
-`sudo apt-get install -y ca-certificates`<br>
+`sudo apt-get install -y openssh-server postfix ca-certificates`<br>
 
 选择'Internet Site'
 
