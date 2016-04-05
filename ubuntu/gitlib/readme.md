@@ -10,6 +10,21 @@
 # 安装gitlib
 `sudo dpkg -i gitlab-ce_8.6.3-ce.0_amd64.deb`
 
+# 修改邮件发送方
+`vi /etc/gitlab/gitlab.rb`<br>
+
+    gitlab_rails['gitlab_email_from'] = 'user@yahoo.com'
+
+    gitlab_rails['smtp_enable'] = true
+    gitlab_rails['smtp_address'] = "smtp.mail.yahoo.com"
+    gitlab_rails['smtp_port'] = 465
+    gitlab_rails['smtp_user_name'] = "user@yahoo.com"
+    gitlab_rails['smtp_password'] = "password"
+    gitlab_rails['smtp_authentication'] = "login"
+    gitlab_rails['smtp_enable_starttls_auto'] = true
+    gitlab_rails['smtp_tls'] = true
+    gitlab_rails['smtp_openssl_verify_mode'] = 'peer'
+
 # 配置和使用GitLab
 `sudo gitlab-ctl reconfigure`
 
