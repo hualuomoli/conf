@@ -1,29 +1,15 @@
-# 下载
-[选择对应系统的GitLab安装包](https://mirror.tuna.tsinghua.edu.cn/gitlab-ce)<br>
-`wget https://mirror.tuna.tsinghua.edu.cn/gitlab-ce/ubuntu/pool/trusty/main/g/gitlab-ce/gitlab-ce_8.6.3-ce.0_amd64.deb`
 
-# 安装依赖
-`sudo apt-get install -y openssh-server postfix ca-certificates`<br>
-
+# 安装邮件服务器
+`sudo apt-get install -y postfix`<br>
 选择'Internet Site'
 
-# 安装gitlib
+# 安装依赖
+`sudo apt-get install -y openssh-server ca-certificates`<br>
+
+# 下载安装
+[选择对应系统的GitLab安装包](https://mirror.tuna.tsinghua.edu.cn/gitlab-ce)<br>
+`wget https://mirror.tuna.tsinghua.edu.cn/gitlab-ce/ubuntu/pool/trusty/main/g/gitlab-ce/gitlab-ce_8.6.3-ce.0_amd64.deb`<br>
 `sudo dpkg -i gitlab-ce_8.6.3-ce.0_amd64.deb`
-
-# 修改邮件发送方
-`vi /etc/gitlab/gitlab.rb`<br>
-
-    gitlab_rails['gitlab_email_from'] = 'user@yahoo.com'
-
-    gitlab_rails['smtp_enable'] = true
-    gitlab_rails['smtp_address'] = "smtp.mail.yahoo.com"
-    gitlab_rails['smtp_port'] = 465
-    gitlab_rails['smtp_user_name'] = "user@yahoo.com"
-    gitlab_rails['smtp_password'] = "password"
-    gitlab_rails['smtp_authentication'] = "login"
-    gitlab_rails['smtp_enable_starttls_auto'] = true
-    gitlab_rails['smtp_tls'] = true
-    gitlab_rails['smtp_openssl_verify_mode'] = 'peer'
 
 # 配置和使用GitLab
 `sudo gitlab-ctl reconfigure`
