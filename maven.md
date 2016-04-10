@@ -21,13 +21,13 @@ PATH  追加  D:\apache-maven-3.3.3\bin <br>
 ```
 	<!-- 发布版 -->
 	<server>
-      <id>local-reps</id>
+      <id>local-repo</id>
       <username>admin</username>
       <password>admin123</password>
     </server>
 	<!-- 快照版 -->
 	<server>
-      <id>local-reps-s</id>
+      <id>local-repo-s</id>
       <username>admin</username>
       <password>admin123</password>
     </server>
