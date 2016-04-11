@@ -14,8 +14,10 @@ PATH  追加  D:\apache-maven-3.3.3\bin <br>
 修改文件 D:\apache-maven-3.3.3\conf\settings.xml
 
 ## localRepository
-<!-- 本地资源存放目录 -->
-<localRepository>D:/apache-maven-3.3.3/repository</localRepository>
+```
+	<!-- 本地资源存放目录 -->
+	<localRepository>D:/apache-maven-3.3.3/repository</localRepository>
+```
 
 ## servers
 ```
