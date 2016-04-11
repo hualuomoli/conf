@@ -1,11 +1,11 @@
-# 配置环境变量
+# 閰嶇疆鐜鍙橀噺
 
-java安装目录 C:\Program Files\Java\jdk1.7.0_67 <br>
+java瀹夎鐩綍 C:\Program Files\Java\jdk1.7.0_67 <br>
 
 JAVA_HOME = C:\Program Files\Java\jdk1.7.0_67 <br>
-PATH 追加 C:\Program Files\Java\jdk1.7.0_67\bin
+PATH 杩藉姞 C:\Program Files\Java\jdk1.7.0_67\bin
 
-# 测试配置
+# 娴嬭瘯閰嶇疆
 `java -version` <br>
 `echo %JAVA_HOME%` <br>
 `echo %PATH%`  <br>
