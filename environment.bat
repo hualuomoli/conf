@@ -1,5 +1,8 @@
 @echo OFF
 
+rem soft install path is D:
+rem user name is admin
+
 set filename=environment.reg
 rem user environment path
 set PATH=
@@ -17,10 +20,16 @@ rem maven
 echo "MVN_HOME"="D:\\apache-maven-3.3.3" >> %filename%
 PATH=%PATH%D:\\apache-maven-3.3.3\\bin;
 
+rem git
+echo "GIT_HOME"="D:\\Git" >> %filename%
+PATH=%PATH%D:\\Git\\bin;
+
+
 rem PATH
 echo "PATH"="%PATH%" >> %filename%
 
 call %filename%
 
 echo user environment has been configure
+
 pause
