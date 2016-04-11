@@ -1,17 +1,5 @@
-# 配置环境变量
-
-maven解压目录 D:\apache-maven-3.3.3
-
-MVN_HOME = D:\apache-maven-3.3.3 <br>
-PATH  追加  D:\apache-maven-3.3.3\bin <br>
-
-# 测试配置
-`mvn -v` <br>
-`echo %MVN_HOME%` <br>
-`echo %PATH%`  <br>
-
 # 配置
-修改文件 D:\apache-maven-3.3.3\conf\settings.xml
+修改文件 conf\settings.xml
 
 ## localRepository
 ```

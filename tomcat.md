@@ -1,7 +1,5 @@
 # 配置
-maven解压目录 D:\apache-tomcat-7.0.65 <br>
-
-修改文件 D:\apache-tomcat-7.0.65\conf\server.xml <br>
+修改文件 conf\server.xml <br>
 
 修改 Connector默认端口，默认编码集
 ```
