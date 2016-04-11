@@ -2,7 +2,6 @@
 # 配置默认编码集
 修改`eclipse.ini`增加一行<br>
 ```
---encoding
 -Dfile.encoding=utf-8
 ```
 
