@@ -36,8 +36,6 @@
           <id>local-repository</id>
           <name>Repository for localhost builds</name>
           <url>http://localhost:8081/nexus/content/groups/public/</url>
-          <layout>default</layout>
-          <snapshotPolicy>always</snapshotPolicy>
 		  <releases>
             <enabled>true</enabled>
             <updatePolicy>never</updatePolicy>
