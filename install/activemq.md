@@ -12,9 +12,6 @@ tar -xvf apache-activemq-5.13.3-bin.tar.gz
 mv apache-activemq-5.13.3 /opt/activemq-5.13.3
 ```
 
-## 赋权
-`chmod -R 777 $CATALINA_HOME`
-
 ## [配置](./profile.md)
 1、`vi /etc/profile` <br>
 2、在文件末尾添加
@@ -24,6 +21,9 @@ export ACTIVEMQ_HOME=/opt/activemq-5.13.3
 export PATH=$PATH:$ACTIVEMQ_HOME/bin
 ```
 3、`source /etc/profile`
+
+## 赋权
+`chmod -R 777 $ACTIVEMQ_HOME`
 
 ## 测试
 `activemq --version` 显示如下内容表示配置成功
