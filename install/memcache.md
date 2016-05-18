@@ -15,6 +15,15 @@
     $ make
     $ make install
 
+## 添加用户与组
+
+    groupadd apache
+    useradd -r -g apache apache
+
+## 赋权
+1、memcached安装目录赋权<br>
+`chown -R apache:apache /opt/memcached-1.4.25` 
+
 ## 编写脚本
 `vi /opt/memcached-1.4.25/bin/start.sh` <br>
 
