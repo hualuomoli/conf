@@ -74,7 +74,7 @@ export ACTIVEMQ_BASE=/mnt/activemq
 
 ## 测试
 登陆 http://ip:8161 查看是否启动成功 <br>
-![activemq](../images/activemq-install.md)
+![activemq](../images/activemq-install.png)
 
 ## 安装开机启动
 `vi /etc/rc.d/rc.local` 增加启动命令<br>
