@@ -90,7 +90,7 @@ stop()
 }
 
 # 如果文件不存在,退出
-[ -f /opt/mongodb-3.2.6/bin/mongodb ] || exit 0
+[ -f /opt/mongodb-3.2.6/bin/mongod ] || exit 0
  
 # 根据参数判断.
 case "$1" in
