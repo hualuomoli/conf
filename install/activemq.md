@@ -28,7 +28,7 @@ activemq 依赖[jdk](jdk.md),请确定已经安装 <br>
 ![activemq](../images/activemq-install.png)
 
 ## 开机启动
-`vi /etc/rc.d/init.d/activemq`
+1、编辑 `vi /etc/rc.d/init.d/activemq`
 
 ```
 #!/bin/sh
@@ -80,7 +80,9 @@ esac
 exit 0
 ```
 
+2、赋权 `chmod +x /etc/rc.d/init.d/activemq`
 
+3、添加到系统启动
 ```
 chkconfig  --add activemq
 chkconfig  --level 235  activemq  on

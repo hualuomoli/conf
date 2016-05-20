@@ -42,7 +42,7 @@ Escape character is '^]'.
 
 
 ## 开机启动
-`vi /etc/rc.d/init.d/memcached`
+1、编辑 `vi /etc/rc.d/init.d/memcached`
 
 ```
 #!/bin/sh
@@ -94,7 +94,9 @@ esac
 exit 0
 ```
 
+2、赋权 `chmod +x /etc/rc.d/init.d/memcached`
 
+3、添加到系统启动
 ```
 chkconfig  --add memcached
 chkconfig  --level 235  memcached  on
