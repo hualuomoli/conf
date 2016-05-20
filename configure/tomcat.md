@@ -64,8 +64,8 @@ vi ~/server/conf/server.xml
                resourceName="UserDatabase"/>
       </Realm>
     
-    <!-- 主机信息,name主机名,appBase代码路径(使用绝对路径) -->
-      <Host name="localhost"  appBase="/mnt/hualuomoli/project/webapps"
+    <!-- 主机信息,name主机名,appBase代码路径(可以使用绝对路径和相对路径[相对于$CATALINA_BASE]) -->
+      <Host name="localhost"  appBase="../project/webapps"
             unpackWARs="true" autoDeploy="true">
 
 
@@ -107,7 +107,7 @@ ps -ef|grep tomcat|grep java|grep $curr_path|grep -v grep|awk '{print $2}'|xargs
 ```
  
 ## 测试
-1、启动 `sh ~/server/bin/start.sh`
-2、浏览器访问http:ip:10080,出现如下提示表示启动成功
+1、启动 `sh ~/server/bin/start.sh` <br>
+2、浏览器访问http:ip:10080,出现如下提示表示启动成功 <br>
 ![tomcat](../images/tomcat-install.png)
 
