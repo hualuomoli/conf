@@ -1,4 +1,4 @@
-# 安装JDK
+# JDK
 
 安装目录 /opt/jdk1.7.0_67
 
@@ -26,23 +26,26 @@
  <br>
 
 ## 安装
-解压缩`JDK`到`/opt/jdk1.7.0_67` <br>
-`tar -xvf jdk-7u67-linux-x64.tar.gz` <br>
-`mv jdk1.7.0_67 /opt/jdk1.7.0_67`
+```
+tar -xvf jdk-7u67-linux-x64.tar.gz
+mv jdk1.7.0_67 /opt/jdk1.7.0_67
+```
 
-## [配置](./profile.md)
-1、`vi /etc/profile` <br>
-2、在文件末尾添加
+## 配置环境变量
+1、编辑 `vi /etc/profile` 在文件最后增加 <br>
 ```
 # jdk
 export JAVA_HOME=/opt/jdk1.7.0_67
 export PATH=$PATH:$JAVA_HOME/bin
 ```
-3、`source /etc/profile`
+2、生效 `source /etc/profile`
 
 ## 测试
-`java -version` 显示如下内容表示配置成功
+`java -version` 提示如下信息，安装成功
 
     java version "1.7.0_67"
     Java(TM) SE Runtime Environment (build 1.7.0_67-b01)
     Java HotSpot(TM) 64-Bit Server VM (build 24.65-b04, mixed mode)
+
+
+
