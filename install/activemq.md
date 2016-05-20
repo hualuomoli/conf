@@ -21,6 +21,7 @@ export PATH=$PATH:$ACTIVEMQ_HOME/bin
 2、生效 `source /etc/profile`
 
 ## 测试
+activemq 依赖[jdk](jdk.md),请确定已经安装 <br>
 1、启动 `activemq start` <br>
 2、登录控制台 <br>
 浏览器访问 http://ip:8161 <br>

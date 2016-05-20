@@ -21,7 +21,7 @@ export PATH=$PATH:$MAVEN_HOME/bin
 2、生效 `source /etc/profile`
 
 ## 测试
-maven 依赖jdk,请确定已经安装 <br>
+maven 依赖[jdk](jdk.md),请确定已经安装 <br>
 `mvn -v` 提示如下信息，安装成功
 
      Apache Maven 3.3.3 (7994120775791599e205a5524ec3e0dfe41d4a06; 2015-04-22T19:57:37+08:00)

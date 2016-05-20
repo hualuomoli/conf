@@ -22,7 +22,7 @@ export CATALINA_HOME=/opt/tomcat-7.0.65
 2、生效 `source /etc/profile`
 
 ## 测试
-tomcat 依赖jdk,请确定已经安装 <br>
+tomcat 依赖[jdk](jdk.md),请确定已经安装 <br>
 1、启动 `/opt/tomcat-7.0.65/bin/startup.sh`  <br>
 2、登录控制台 <br>
 浏览器访问 http://ip:8080 <br>
