@@ -15,22 +15,25 @@
     $ make
     $ make install
 
-## 添加用户与组
+# 设置开机启动 
 
-    groupadd apache
-    useradd -r -g apache apache
-
-## 赋权
-1、memcached安装目录赋权<br>
-`chown -R apache:apache /opt/memcached-1.4.25` 
-
-## 编写脚本
-`vi /opt/memcached-1.4.25/bin/start.sh` <br>
+`vi /etc/rc.d/init.d/memcached`
 
 ```
 #!/bin/sh
-
-# 使用命令的绝对路径
+#
+# memcached:    MemCached Daemon
+#
+# chkconfig:    - 90 25 
+# description:  MemCached Daemon
+#
+# Source function library.
+. /etc/rc.d/init.d/functions
+. /etc/sysconfig/network
+ 
+start() 
+{
+    
 # 参数说明:
 #   -d 启动一个守护进程
 #   -m 分配给Memcache使用的内存数量，单位是MB
@@ -40,24 +43,41 @@
 #   -c 最大运行的并发连接数，默认是1024
 #   -P 保存Memcache的pid文件 
 
-/opt/memcached-1.4.25/bin/memcached  -d -m 10 -u root -l 127.0.0.1 -p 11211 -c 256 -P /tmp/memcached.pid
+        echo -n $"Starting memcached: "
+        daemon /opt/memcached-1.4.25/bin/memcached  -d -u daemon -m 400 -l 127.0.0.1 -p 11211 -c 256 -P /tmp/memcached.pid
+        echo
+}
+ 
+stop() 
+{
+        echo -n $"Shutting down memcached: "
+        killproc memcached 
+        echo
+}
+ 
+[ -f /opt/memcached-1.4.25/bin/memcached ] || exit 0
+ 
+# See how we were called.
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart|reload)
+        stop
+        start
+        ;;
+  *)
+        echo $"Usage: $0 {start|stop|restart|reload|condrestart}"
+        exit 1
+esac
+exit 0
 ```
 
-## 赋权
-`chmod +x /opt/memcached-1.4.25/bin/start.sh`
-
-## 启动
-`sh /opt/memcached-1.4.25/bin/start.sh`
-
-## 测试
-`telnet localhost 11211`
-
-## 安装开机启动
-`vi /etc/rc.d/rc.local` 增加启动命令<br>
-
 ```
-# memcached
-/opt/memcached-1.4.25/bin/start.sh
+chkconfig  --add memcached 
+chkconfig  --level 235  memcached  on
+chkconfig  --list | grep memcached
 ```
-
-

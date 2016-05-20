@@ -26,11 +26,70 @@
 `chown -R 用户名:组名 目录或者文件`
 
 ## 开机启动
-1、修改 /etc/rc.d/rc.local
+
+### rc.local
 `vi /etc/rc.d/rc.local`
+
 ```
-# 启动脚本绝对路径
+# 启动脚本绝对路径 (脚本需要配置依赖环境变量)
+绝对路径 > 日志文件 2>&1
 ```
 
-2、启动脚本增加执行权限
 `chmod +x 启动脚本`
+
+### chkconfig
+以memcached为例 <br>
+`vi /etc/rc.d/init.d/memcached`
+
+```
+#!/bin/sh
+#
+# memcached:    MemCached Daemon
+#
+# chkconfig:    - 90 25 
+# description:  MemCached Daemon
+#
+# Source function library.
+. /etc/rc.d/init.d/functions
+. /etc/sysconfig/network
+ 
+start() 
+{
+        echo -n $"Starting memcached: "
+        daemon /opt/memcached-1.4.25/bin/memcached  -d -u daemon -m 400 -l 127.0.0.1 -p 11211 -c 256 -P /tmp/memcached.pid
+        echo
+}
+ 
+stop() 
+{
+        echo -n $"Shutting down memcached: "
+        killproc memcached 
+        echo
+}
+ 
+[ -f /opt/memcached-1.4.25/bin/memcached ] || exit 0
+ 
+# See how we were called.
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart|reload)
+        stop
+        start
+        ;;
+  *)
+        echo $"Usage: $0 {start|stop|restart|reload|condrestart}"
+        exit 1
+esac
+exit 0
+```
+
+```
+chkconfig  --add memcached 
+chkconfig  --level 235  memcached  on
+chkconfig  --list | grep memcached
+```
