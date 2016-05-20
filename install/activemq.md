@@ -75,7 +75,7 @@ case "$1" in
         start
         ;;
   *)
-        echo $"Usage: $0 {start|stop|restart|reload|condrestart}"
+        echo $"Usage: $0 {start|stop|restart|reload}"
         exit 1
 esac
 exit 0

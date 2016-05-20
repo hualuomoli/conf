@@ -36,7 +36,7 @@ wrapper.java.command=/opt/jdk1.7.0_67/bin/java
 
 ## 测试
 nexus 依赖[jdk](jdk.md),请确定已经安装 <br>
-1、启动 `nexus start` <br>
+1、启动 `export RUN_AS_USER=root && nexus start` <br>
 2、登录控制台 <br>
 浏览器访问 http://ip:8081/nexus <br>
 ![nexus](../images/nexus-install.png)
@@ -60,7 +60,8 @@ nexus 依赖[jdk](jdk.md),请确定已经安装 <br>
 start() 
 {
         echo -n $"Starting nexus: "
-       opt/nexus-2.8.1-01/bin/nexus start
+        export RUN_AS_USER=root
+        /opt/nexus-2.8.1-01/bin/nexus start
         echo
 }
 
@@ -88,7 +89,7 @@ case "$1" in
         start
         ;;
   *)
-        echo $"Usage: $0 {start|stop|restart|reload|condrestart}"
+        echo $"Usage: $0 {start|stop|restart|reload}"
         exit 1
 esac
 exit 0

@@ -20,8 +20,17 @@ export PATH=$PATH:$MONGO_HOME/bin
 ```
 2、生效 `source /etc/profile`
 
+## 创建目录
+```
+mkdir /opt/mongodb-3.2.6/data
+mkdir /opt/mongodb-3.2.6/log
+```
+
 ## 测试
-1、启动 `mongod -port 27017 --dbpath /opt/mongodb-3.2.6 &` <br>
+1、启动 
+```
+mongod -port 27017 --dbpath /opt/mongodb-3.2.6/data --logpath /opt/mongodb-3.2.6/log/mongodb.log
+```
 2、`mongo` 提示如下信息，启动成功 <br>
 ```
 MongoDB shell version: 3.2.6
@@ -96,7 +105,7 @@ case "$1" in
         start
         ;;
   *)
-        echo $"Usage: $0 {start|stop|restart|reload|condrestart}"
+        echo $"Usage: $0 {start|stop|restart|reload}"
         exit 1
 esac
 exit 0

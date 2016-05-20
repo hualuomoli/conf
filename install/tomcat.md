@@ -28,3 +28,7 @@ tomcat 依赖[jdk](jdk.md),请确定已经安装 <br>
 浏览器访问 http://ip:8080 <br>
 ![tomcat](../images/tomcat-install.png)
 
+## 赋权
+```
+chmod -R o+r /opt/tomcat-7.0.65/conf
+```
