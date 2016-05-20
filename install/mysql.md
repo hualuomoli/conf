@@ -50,6 +50,7 @@ exit
 ## 配置数据库
 ```
 cd /opt/mysql-5.6.27/support-files
+cp mysql.server /etc/rc.d/init.d/mysql
 cp my-default.cnf /etc/my.cnf
 vi /etc/my.cnf
 ```
@@ -100,7 +101,6 @@ service mysql restart
 
 ## 开机启动
 ```
-cp mysql.server /etc/rc.d/init.d/mysql
 chkconfig --add mysql
 chkconfig mysql on
 ```
