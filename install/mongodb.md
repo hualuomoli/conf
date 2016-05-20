@@ -21,7 +21,7 @@ export PATH=$PATH:$MONGO_HOME/bin
 2、生效 `source /etc/profile`
 
 ## 测试
-1、启动 `mongod -port 27017 --dbpath /opt/mongodb-3.2.6` <br>
+1、启动 `mongod -port 27017 --dbpath /opt/mongodb-3.2.6 &` <br>
 2、`mongo` 提示如下信息，启动成功 <br>
 ```
 MongoDB shell version: 3.2.6
@@ -50,7 +50,7 @@ mongod
 
 
 ## 开机启动
-`vi /etc/rc.d/init.d/mongodb`
+1、编辑 `vi /etc/rc.d/init.d/mongodb`
 
 ```
 #!/bin/sh
@@ -102,7 +102,9 @@ esac
 exit 0
 ```
 
+2、赋权 `chmod +x /etc/rc.d/init.d/mongodb`
 
+3、添加到系统启动
 ```
 chkconfig  --add mongodb
 chkconfig  --level 235  mongodb  on

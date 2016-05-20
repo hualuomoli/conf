@@ -42,7 +42,7 @@ nexus 依赖[jdk](jdk.md),请确定已经安装 <br>
 ![nexus](../images/nexus-install.png)
 
 ## 开机启动
-`vi /etc/rc.d/init.d/nexus`
+1、编辑 `vi /etc/rc.d/init.d/nexus`
 
 ```
 #!/bin/sh
@@ -94,7 +94,9 @@ esac
 exit 0
 ```
 
+2、赋权 `chmod +x /etc/rc.d/init.d/nexus`
 
+3、添加到系统启动
 ```
 chkconfig  --add nexus
 chkconfig  --level 235  nexus  on
