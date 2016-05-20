@@ -11,7 +11,7 @@
 yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
 # 源码安装
 tar -zxf git-2.8.2.tar.gz
-cd git-2.8.2.tar.gz
+cd git-2.8.2
 make configure
 ./configure --prefix=/opt/git-2.8.2
 make
