@@ -45,6 +45,7 @@ activemq 依赖[jdk](jdk.md),请确定已经安装 <br>
 # 定义启动
 start() 
 {
+        export JAVA_HOME=/opt/jdk1.7.0_67
         echo -n $"Starting activeMQ: "
         /opt/activemq-5.13.3/bin/activemq start
         echo
