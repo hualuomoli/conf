@@ -59,18 +59,19 @@ nexus 依赖[jdk](jdk.md),请确定已经安装 <br>
 # 定义启动
 start() 
 {
-        echo -n $"Starting nexus: "
+        export JAVA_HOME=/opt/jdk1.7.0_67
         export RUN_AS_USER=root
+        echo "Starting Nexus......"
         /opt/nexus-2.8.1-01/bin/nexus start
-        echo
+        echo "Nexus Started "
 }
 
 # 定义停止
 stop() 
 {
-        echo -n $"Shutting down nexus: "
+        echo "Shutting Nexus...... "
         killproc nexus 
-        echo
+        echo "Nexus Shutted down "
 }
 
 # 如果文件不存在,退出

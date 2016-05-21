@@ -59,17 +59,17 @@ Escape character is '^]'.
 # 定义启动
 start() 
 {
-        echo -n $"Starting memcached: "
+        echo "Starting MemCached......"
         daemon /opt/memcached-1.4.25/bin/memcached  -d -u daemon -m 400 -l 127.0.0.1 -p 11211 -c 256 -P /tmp/memcached.pid
-        echo
+        echo "MemCached Started "
 }
 
 # 定义停止
 stop() 
 {
-        echo -n $"Shutting down memcached: "
+        echo "Shutting MemCached...... "
         killproc memcached 
-        echo
+        echo "MemCached Shutted down "
 }
 
 # 如果文件不存在,退出

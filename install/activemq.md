@@ -46,17 +46,17 @@ activemq 依赖[jdk](jdk.md),请确定已经安装 <br>
 start() 
 {
         export JAVA_HOME=/opt/jdk1.7.0_67
-        echo -n $"Starting activeMQ: "
+        echo "Starting activeMQ......"
         /opt/activemq-5.13.3/bin/activemq start
-        echo
+        echo "activeMQ Started "
 }
 
 # 定义停止
 stop() 
 {
-        echo -n $"Shutting down activeMQ: "
+        echo "Shutting ActiveMQ...... "
         killproc activemq 
-        echo
+        echo "ActiveMQ Shutted down "
 }
 
 # 如果文件不存在,退出

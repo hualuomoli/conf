@@ -76,17 +76,17 @@ mongod
 # 定义启动
 start() 
 {
-        echo -n $"Starting mongodb: "
+        echo "Starting Mongodb......"
         /opt/mongodb-3.2.6/bin/mongod -port 27017 --dbpath /opt/mongodb-3.2.6/data --logpath /opt/mongodb-3.2.6/log/mongodb.log
-        echo
+        echo "Mongodb Started "
 }
 
 # 定义停止
 stop() 
 {
-        echo -n $"Shutting down mongodb: "
+        echo "Shutting Mongodb...... "
         killproc mongodb 
-        echo
+        echo "Mongodb Shutted down "
 }
 
 # 如果文件不存在,退出
