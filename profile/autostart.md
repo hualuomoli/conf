@@ -109,3 +109,7 @@ export JAVA_HOME=/opt/jdk1.7.0_67
 su - 用户名 -c 绝对路径
 ```
 
+
+## boot
+系统启动日志文件 <br>
+`tail -2000f /var/log/boot.log`
