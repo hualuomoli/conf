@@ -74,7 +74,7 @@ stop()
 }
 
 # 如果文件不存在,退出
-[ -fopt/nexus-2.8.1-01/bin/nexus ] || exit 0
+[ -f /opt/nexus-2.8.1-01/bin/nexus ] || exit 0
  
 # 根据参数判断.
 case "$1" in
