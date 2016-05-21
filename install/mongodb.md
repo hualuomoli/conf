@@ -77,7 +77,7 @@ mongod
 start() 
 {
         echo "Starting Mongodb......"
-        /opt/mongodb-3.2.6/bin/mongod -port 27017 --dbpath /opt/mongodb-3.2.6/data --logpath /opt/mongodb-3.2.6/log/mongodb.log
+        /opt/mongodb-3.2.6/bin/mongod -port 27017 --dbpath /opt/mongodb-3.2.6/data --logpath /opt/mongodb-3.2.6/log/mongodb.log &
         echo "Mongodb Started "
 }
 

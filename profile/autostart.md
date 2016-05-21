@@ -44,7 +44,8 @@
 start() 
 {
         echo "Starting MemCached......"
-        # daemon 守护线程
+        # memcached需要使用守护线程daemon启动
+    　　# mongodb需要使用 & 挂起
         daemon /opt/memcached-1.4.25/bin/memcached  -d -u daemon -m 400 -l 127.0.0.1 -p 11211 -c 256 -P /tmp/memcached.pid
         echo "MemCached Started "
 }
