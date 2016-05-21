@@ -7,23 +7,25 @@
 ```
 # 创建项目目录和服务器目录
 mkdir ~/projects
+mkdir ~/projects/tomcat
 mkdir ~/servers
-mkdir ~/servers/logs
-mkdir ~/servers/temp
-mkdir ~/servers/bin
+mkdir ~/servers/tomcat
+mkdir ~/servers/tomcat/logs
+mkdir ~/servers/tomcat/temp
+mkdir ~/servers/tomcat/bin
 ```
 
 2、复制配置文件
 ```
 # 复制tomcat的默认项目和配置文件
-cp -R /opt/tomcat-7.0.65/webapps ~/projects/webapps
-cp -R /opt/tomcat-7.0.65/conf ~/servers/conf
+cp -R /opt/tomcat-7.0.65/webapps ~/projects/tomcat
+cp -R /opt/tomcat-7.0.65/conf ~/servers/tomcat/conf
 ```
 
 3、修改配置
 ```
-rm -f ~/servers/conf/server.xml
-vi ~/servers/conf/server.xml
+rm -f ~/servers/tomcat/conf/server.xml
+vi ~/servers/tomcat/conf/server.xml
 ```
 
 配置内容
@@ -65,7 +67,7 @@ vi ~/servers/conf/server.xml
       </Realm>
     
     <!-- 主机信息,name主机名,appBase代码路径(可以使用绝对路径和相对路径[相对于$CATALINA_BASE]) -->
-      <Host name="localhost"  appBase="../projects/webapps"
+      <Host name="localhost"  appBase="../../projects/tomcat"
             unpackWARs="true" autoDeploy="true">
 
 
@@ -81,7 +83,7 @@ vi ~/servers/conf/server.xml
 
 4、编写脚本
 
-启动脚本 `vi ~/servers/bin/start.sh`
+启动脚本 `vi ~/servers/tomcat/bin/start.sh`
 
 ```
 #!/bin/sh
@@ -95,7 +97,7 @@ export CATALINA_BASE=$curr_path/..
 /opt/tomcat-7.0.65/bin/startup.sh
 ```
 
-停止脚本 `vi ~/servers/bin/stop.sh`
+停止脚本 `vi ~/servers/tomcat/bin/stop.sh`
 
 ```
 #!/bin/sh
@@ -107,7 +109,11 @@ ps -ef|grep tomcat|grep java|grep $curr_path|grep -v grep|awk '{print $2}'|xargs
 ```
  
 ## 测试
-1、启动 `sh ~/servers/bin/start.sh` <br>
+1、启动 `sh ~/servers/tomcat/bin/start.sh` <br>
 2、浏览器访问http:ip:10080,出现如下提示表示启动成功 <br>
 ![tomcat](../images/tomcat-install.png)
 
+## 开机启动
+```
+
+```
