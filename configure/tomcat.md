@@ -7,7 +7,6 @@
 ```
 # 创建项目目录和服务器目录
 mkdir ~/projects
-mkdir ~/projects/tomcat
 mkdir ~/servers
 mkdir ~/servers/tomcat
 mkdir ~/servers/tomcat/logs
@@ -91,6 +90,7 @@ vi ~/servers/tomcat/conf/server.xml
 curr_path=$(cd "$(dirname "$0")"; pwd)
 echo $curr_path
 
+export JAVA_HOME=/opt/jdk1.7.0_67
 export CATALINA_BASE=$curr_path/..
 
 
@@ -108,6 +108,12 @@ echo $curr_path
 ps -ef|grep tomcat|grep java|grep $curr_path|grep -v grep|awk '{print $2}'|xargs kill -9
 ```
  
+赋权
+```
+chmod 755 ~/servers/tomcat/bin/start.sh
+chmod 755 ~/servers/tomcat/bin/stop.sh
+```
+
 ## 测试
 1、启动 `sh ~/servers/tomcat/bin/start.sh` <br>
 2、浏览器访问http:ip:10080,出现如下提示表示启动成功 <br>
