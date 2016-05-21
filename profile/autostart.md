@@ -105,5 +105,7 @@ export JAVA_HOME=/opt/jdk1.7.0_67
 # 输出启动日志到文件(便于查错)
 /opt/tomcat-7.0.65/bin/startup.sh >> /opt/tomcat-7.0.65/logs/start.log 2>&1
 绝对路径 [> 日志文件 2>&1]
+# 非root用户启动
+sudo -u 用户名 绝对路径
 ```
 
