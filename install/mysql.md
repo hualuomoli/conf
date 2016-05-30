@@ -59,6 +59,10 @@ vi /etc/my.cnf
 basedir=/opt/mysql-5.6.27
 datadir=/mnt/mysql/data
 port=3306
+
+
+max_allowed_packet = 20M
+
 ```
 
 ## 测试
