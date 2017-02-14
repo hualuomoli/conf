@@ -129,7 +129,15 @@
                 <map>
                     <authorizationMap>
                         <authorizationEntries>
-                            <!-->表示通配符,例如USERS.>表示以USERS.开头的主题,>表示所有主题,read表示读的权限,write表示写的权限，admin表示角色组-->
+                            <!--
+								通配符:
+									>			所有
+									USERS.>		以USERS.开头
+								权限
+								read		可以从queue或者topic接收消息
+								write		可以向queue或者topic发送消息
+								admin		可以创建queue或者topic
+							-->
                             <!-- 可以配置用户，也可以配置组 -->
                             <!-- manager can read and write all queue -->
                             <authorizationEntry queue=">" read="manager" write="manager" admin="manager" />
