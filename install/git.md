@@ -8,7 +8,7 @@
 ## 安装
 ```
 # 安装依赖
-yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel
 # 源码安装
 tar -zxf git-2.8.2.tar.gz
 cd git-2.8.2
