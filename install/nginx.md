@@ -1,6 +1,6 @@
-# Git
+# Nginx
 
-安装目录 /opt/git-2.8.2
+安装目录 /opt/nginx-1.13.9
 
 ## 下载
 `wget http://nginx.org/download/nginx-1.13.9.tar.gz`
