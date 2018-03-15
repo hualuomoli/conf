@@ -17,13 +17,6 @@ mv mysql-5.6.27-linux-glibc2.5-x86_64 /opt/mysql-5.6.27
 groupadd mysql
 useradd -r -g mysql mysql
 ```
-
-## 添加数据目录
-```
-mkdir /opt/mysql-5.6.27
-mkdir /opt/mysql-5.6.27/data
-```
-
 ## 赋权
 ```
 chown -R mysql:mysql /opt/mysql-5.6.27
