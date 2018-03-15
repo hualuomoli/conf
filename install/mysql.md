@@ -30,20 +30,19 @@ useradd -r -g mysql mysql
 
 ## 添加数据目录
 ```
-mkdir /mnt/mysql
-mkdir /mnt/mysql/data
+mkdir /opt/mysql-5.6.27
+mkdir /opt/mysql-5.6.27/data
 ```
 
 ## 赋权
 ```
 chown -R mysql:mysql /opt/mysql-5.6.27
-chown -R mysql:mysql /mnt/mysql
 ```
 
 ## 安装数据库
 ```
 su mysql
-/opt/mysql-5.6.27/scripts/mysql_install_db --user=mysql --basedir=/opt/mysql-5.6.27 --datadir=/mnt/mysql/data
+/opt/mysql-5.6.27/scripts/mysql_install_db --user=mysql --basedir=/opt/mysql-5.6.27 --datadir=/opt/mysql-5.6.27/data
 exit
 ```
 
@@ -57,7 +56,7 @@ vi /etc/my.cnf
 配置内容增加
 ```
 basedir=/opt/mysql-5.6.27
-datadir=/mnt/mysql/data
+datadir=/opt/mysql-5.6.27/data
 port=3306
 
 
