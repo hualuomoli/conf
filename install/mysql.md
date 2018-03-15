@@ -12,16 +12,6 @@
 tar -xvf mysql-5.6.27-linux-glibc2.5-x86_64.tar.gz
 mv mysql-5.6.27-linux-glibc2.5-x86_64 /opt/mysql-5.6.27
 ```
-
-## 配置环境变量
-1、编辑 `vi /etc/profile` 在文件最后增加 <br>
-```
-# mysql
-export MYSQL_HOME=/opt/mysql-5.6.27
-export PATH=$PATH:$MYSQL_HOME/bin
-```
-2、生效 `source /etc/profile`
-
 ## 添加用户与组
 ```
 groupadd mysql
@@ -63,6 +53,15 @@ port=3306
 max_allowed_packet = 20M
 
 ```
+
+## 配置环境变量
+1、编辑 `vi /etc/profile` 在文件最后增加 <br>
+```
+# mysql
+export MYSQL_HOME=/opt/mysql-5.6.27
+export PATH=$PATH:$MYSQL_HOME/bin
+```
+2、生效 `source /etc/profile`
 
 ## 测试
 ```
