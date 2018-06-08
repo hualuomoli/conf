@@ -14,7 +14,7 @@
 `Help --> Eclipse Marketplace` 打开插件市场<br>
 在搜索框输入`Subversion` 选择Subclipse1.10.13,点击`install` 安装完成后重启即可<br>
 
-## Subversion
+## Spring Tools
 `Help --> Eclipse Marketplace` 打开插件市场<br>
 在搜索框输入`STS` 选择Spring Tools,点击`install` 安装完成后重启即可<br>
 
